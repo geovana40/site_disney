@@ -1,55 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disney magicas</title>
-    <link real="stylesheet" href="style.css">  
+    <title>Disney Magic Kingdom</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.disney.com/favicon.ico" type="image/x-icon">
 </head>
-<body>  
+<body>
     <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Walt_Disney_Pictures_2011_logo.svg" alt="Logo Disney" class="logo">
         <nav>
+            <div class="logo">
+                <img src="https://www.disney.com/favicon.ico" alt="Disney Logo">
+                <span>Disney Magic</span>
+            </div>
             <ul>
-                <li><a href="#">inicio</a></li>
-                <li><a href="#personagens"></a></li>
-                <li><a href="#filmes">Filmes</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#movies">Filmes</a></li>
+                <li><a href="#characters">Personagens</a></li>
+                <li><a href="#parks">Parques</a></li>
+                <li><a href="#shop">Loja</a></li>
             </ul>
-        </nav>  
+        </nav>
+        <div class="hero">
+            <h1>Onde os sonhos se tornam realidade!</h1>
+            <p>Explore o mundo mágico da Disney.</p>
+            <button id="exploreButton">Explorar Agora</button>
+        </div>
     </header>
 
-    <section class="baner">
-        <h1>Bem-vindo ao mundo magico da Disney</h1>
-        <p>descubra novas esperiencias nesse mundo de fantasias</p>
-    </section>
-    
-     <!-- Galeria de Filmes -->
-    <section class="filmes">
-        <h2>Filmes Icônicos</h2>
-        <div class="galeria">
-            <div class="filme">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Disney%27s_Frozen_Logo.svg" alt="Frozen">
-                <p>Frozen</p>
+    <main>
+        <section id="movies" class="content-section">
+            <h2>Filmes Recentes</h2>
+            <div class="movie-grid">
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300/0000FF/FFFFFF?text=Filme+1" alt="Filme 1">
+                    <h3>Título do Filme 1</h3>
+                    <p>Uma breve descrição do filme.</p>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300/FF0000/FFFFFF?text=Filme+2" alt="Filme 2">
+                    <h3>Título do Filme 2</h3>
+                    <p>Uma breve descrição do filme.</p>
+                </div>
+                <div class="movie-card">
+                    <img src="https://via.placeholder.com/200x300/00FF00/FFFFFF?text=Filme+3" alt="Filme 3">
+                    <h3>Título do Filme 3</h3>
+                    <p>Uma breve descrição do filme.</p>
+                </div>
             </div>
-            <div class="filme">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/The_Lion_King_2019_logo.svg" alt="O Rei Leão">
-                <p>O Rei Leão</p>
-            </div>
-            <div class="filme">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Aladdin2019Logo.svg" alt="Aladdin">
-                <p>Aladdin</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Rodapé -->
+        <section id="characters" class="content-section">
+            <h2>Personagens Icônicos</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <img src="https://via.placeholder.com/150/FFFF00/000000?text=Mickey" alt="Mickey Mouse">
+                    <h3>Mickey Mouse</h3>
+                </div>
+                <div class="character-card">
+                    <img src="https://via.placeholder.com/150/FFC0CB/000000?text=Minnie" alt="Minnie Mouse">
+                    <h3>Minnie Mouse</h3>
+                </div>
+                <div class="character-card">
+                    <img src="https://via.placeholder.com/150/800080/FFFFFF?text=Pato+Donald" alt="Pato Donald">
+                    <h3>Pato Donald</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="parks" class="content-section">
+            <h2>Nossos Parques</h2>
+            <p>Descubra a magia dos nossos parques temáticos ao redor do mundo!</p>
+            <ul>
+                <li>Walt Disney World Resort, Flórida, EUA</li>
+                <li>Disneyland Resort, Califórnia, EUA</li>
+                <li>Disneyland Paris, França</li>
+                <li>Tokyo Disney Resort, Japão</li>
+                <li>Hong Kong Disneyland Resort, China</li>
+                <li>Shanghai Disney Resort, China</li>
+            </ul>
+        </section>
+    </main>
+
     <footer>
-        <p> 2025 Disney. Todos os direitos reservados.</p>
-        <ul>
-            <li><a href="#">Política de Privacidade</a></li>
-            <li><a href="#">Termos de Serviço</a></li>
-        </ul>
-    
+        <p>&copy; 2025 Disney Magic Kingdom. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --disney-blue: #0072bc;
+    --disney-gold: #fccb06;
+    --disney-light-gray: #f4f4f4;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--disney-light-gray);
+    color: var(--text-color);
+}
+
+header {
+    background: linear-gradient(135deg, var(--disney-blue), #004d80);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+nav .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--disney-gold);
+}
+
+.hero {
+    padding: 80px 20px;
+    background: url('https://via.placeholder.com/1500x500/0072bc/FFFFFF?text=Disney+Castle') no-repeat center center/cover;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+#exploreButton {
+    background-color: var(--disney-gold);
+    color: var(--disney-blue);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#exploreButton:hover {
+    background-color: #e0b400;
+    transform: scale(1.05);
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.content-section {
+    background-color: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-section h2 {
+    color: var(--disney-blue);
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.movie-grid, .character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.movie-card, .character-card {
+    background-color: var(--disney-light-gray);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.movie-card:hover, .character-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.character-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px auto 15px;
+    border: 3px solid var(--disney-gold);
+}
+
+.movie-card h3, .character-card h3 {
+    color: var(--disney-blue);
+    margin: 15px 0 10px;
+}
+
+.movie-card p {
+    font-size: 0.9em;
+    color: #555;
+    padding: 0 15px;
+}
+
+#parks ul {
+    list-style: disc;
+    padding-left: 30px;
+    line-height: 1.8;
+}
+
+#parks ul li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+footer {
+    background-color: var(--disney-blue);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .movie-grid, .character-grid {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    #exploreButton {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .content-section h2 {
+        font-size: 2em;
+    }
+}
